@@ -1,10 +1,10 @@
 # diaz-post1-u2
 Post-contenido — Exportación de reportes académicos con patrones creacionales justificados
-### Decisión de diseño requerida — Parte 1 (1 de 2): ¿qué patrón aplica?
+# Decisión de diseño requerida — Parte 1 (1 de 2): ¿qué patrón aplica?
 
 **Patrón elegido:** Abstract Factory
 
-# Análisis mediante Preguntas Diagnósticas
+##Análisis mediante Preguntas Diagnósticas
 
 | Pregunta Diagnóstica | Análisis y Respuesta para el Sistema de Reportes | Patrón al que apunta |
 | :--- | :--- | :--- |
@@ -17,7 +17,7 @@ Post-contenido — Exportación de reportes académicos con patrones creacionale
 * **Por qué se eligió Abstract Factory:** Garantiza por diseño que todas las piezas que conforman el reporte (cuerpo, encabezado y pie de página) se creen juntas bajo un mismo formato compatible. Al centralizar la creación en una fábrica por formato, se imposibilita estructuralmente que el sistema combine un cuerpo de un tipo con un encabezado de otro.
 * **Por qué se descartó Factory Method:** Factory Method está pensado para crear **un solo producto aislado**. Si usáramos Factory Method, tendríamos un creador separado para el cuerpo y otro creador separado para el encabezado, dejando en el código principal la responsabilidad de no cruzarlos. Esto mantendría abierto el riesgo de mezclar formatos distintos, fallando en resolver el problema central del ejercicio.
 
-### Decisión de diseño requerida — Parte 1 (2 de 2): ¿cómo se resuelve la fábrica concreta en tiempo de ejecución?
+# Decisión de diseño requerida — Parte 1 (2 de 2): ¿cómo se resuelve la fábrica concreta en tiempo de ejecución?
 
 **Mecanismo Elegido:** Registro Dinámico con `Map<String, Supplier<ReportFormatFactory>>` (Lookup Table)
 
