@@ -4,7 +4,7 @@ Post-contenido — Exportación de reportes académicos con patrones creacionale
 
 **Patrón elegido:** Abstract Factory
 
-##Análisis mediante Preguntas Diagnósticas
+## Análisis mediante Preguntas Diagnósticas
 
 | Pregunta Diagnóstica | Análisis y Respuesta para el Sistema de Reportes | Patrón al que apunta |
 | :--- | :--- | :--- |
